@@ -1,19 +1,19 @@
 export const secondSectionData = [
   {
-    title: 'INNOVACIÓN',
+    title: 'AJUSTADO PARA EL GAMING',
     description:
-      'Este mando asimétrico ofrece características revolucionarias para mejorar tu precisión y rendimiento en el juego. Equipado con joysticks y gatillos dotados de tecnología Hall Effect, ofrece además las mejores opciones de personalización.',
+      'Dentro del 800 PRO encontrará controladores de baja distorsión, cámaras acústicas aisladas y resonadores de tubo bajo. Todo diseñado para mejorar tu experiencia de juego.',
   },
   {
-    title: 'NEXTGEN',
+    title: '24H SIN PARAR',
     description:
-      'Diseñado para jugadores profesionales en busca de rendimiento. Supera todas las expectativas con su tecnología optimizada para la PS5. Disfruta de una interfaz de configuración enriquecida, un diseño modular mejorado y ergonómico, todo envuelto en materiales de primera calidad para un confort incomparable.',
+      'Con una impresionante duración de la batería, el 800 PRO te permite mantenerte en el juego sin interrupciones, y gracias a la nueva estación base, siempre estará listo para tu próxima sesión.',
   },
 ];
 
 export const secondSectionImg = [
   {
-    src: '/testingrepo/innovationsection.png',
-    alt: 'Mando Revolution 5 PRO',
+    src: '/testingsecond/gamingdesigned.webp',
+    alt: 'RIG 800 PRO',
   },
 ];

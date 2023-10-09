@@ -18,7 +18,7 @@ import { secondSectionData, secondSectionImg } from '../data/second_section.js';
           secondSectionData.map((eachColumn) => {
             return (
               <div class="flex flex-col gap-2 xl:gap-4">
-                <h2 class="text-[30px] xl:text-[40px] font-bold tracking-widest text-gray-300">
+                <h2 class="text-[30px] xl:text-[40px] font-bold tracking-widest text-gray-200">
                   {eachColumn.title}
                 </h2>
                 <p class="2xl:text-xl">{eachColumn.description}</p>
@@ -27,18 +27,6 @@ import { secondSectionData, secondSectionImg } from '../data/second_section.js';
           })
         }
       </div>
-
-      {
-        secondSectionImg.map((img) => {
-          return (
-            <img
-              class="object-cover sm:max-w-sm lg:max-w-md xl:max-w-xl order-1 pl-8 hidden lg:block"
-              src={img.src}
-              alt={img.alt}
-            />
-          );
-        })
-      }
     </div>
   </article>
 
@@ -51,9 +39,9 @@ import { secondSectionData, secondSectionImg } from '../data/second_section.js';
     >
   </div>
 
-  <div
+  <img
     slot="background"
-    class="bg-gradient-to-r from-zinc-950 to-zinc-800 object-center object-cover h-full w-full"
-  >
-  </div>
+    src="/testingsecond/bgrig800.png"
+    class="object-center object-cover h-full w-full"
+  />
 </Section>

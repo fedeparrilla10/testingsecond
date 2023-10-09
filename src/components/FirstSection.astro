@@ -4,22 +4,26 @@ import { firstSectionData } from '../data/first_section.js';
 ---
 
 <Section>
-  <article slot="main" class="flex justify-center items-center flex-col gap-10">
+  <article slot="main" class="flex justify-center items-center flex-col gap-3">
     {
       firstSectionData.map((data) => {
         return (
           <>
-            <h1 class="text-[42px] font-bolder">{data.title}</h1>
-            <div class="flex items-center justify-center flex-col">
+            <h1 class="text-[40px] font-bolder text-gray-100">{data.title}</h1>
+            <div class="flex items-center justify-center flex-col gap-10">
+              <div class="flex flex-row gap-5">
+                <img src="/testingsecond/ps5.svg" alt="" class="w-12 md:w-20" />
+                <img
+                  src="/testingsecond/xbox.svg"
+                  alt=""
+                  class="w-12 md:w-20"
+                />
+                <img src="/testingsecond/pc.svg" alt="" class="w-12 md:w-20" />
+              </div>
               <img
-                class="pl-5"
+                class="w-72 xl:w-96"
                 src={data.firstImg.src}
-                alt="Compatible con PS5, PS4 y PC"
-              />
-              <img
-                class="md:max-w-md lg:max-w-lg xl:max-w-2xl"
-                src={data.secondImg.src}
-                alt="Mando Revolution 5 PRO"
+                alt="RIG 800 PRO"
               />
             </div>
           </>
@@ -30,8 +34,8 @@ import { firstSectionData } from '../data/first_section.js';
 
   <div slot="footer" class="pb-10">
     <a
-      class="border-[3px] border-black font-bold backdrop-blur-sm text-sm rounded text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-      href="#buysection"
+      class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+      href="#"
     >
       COMPRAR AHORA</a
     >
@@ -39,7 +43,7 @@ import { firstSectionData } from '../data/first_section.js';
 
   <div
     slot="background"
-    class="bg-gray-300 object-center object-cover h-full w-full"
+    class="bg-gradient-to-r from-zinc-950 to-zinc-900 object-center object-cover h-full w-full"
   >
   </div>
 </Section>
