@@ -1,0 +1,48 @@
+---
+import Section from './Section.astro';
+import { buySectionData, buySectionStores } from '../data/buy_section';
+---
+
+<Section
+  title="REVOLUTION 5 PRO"
+  subtitle="¡Hazte con él en tu tienda favorita!"
+  color="white"
+  pt="pt-10"
+  textSize="text-[40px]"
+  img="/testingrepo/naconlogo.svg"
+  id="buysection"
+>
+  <article
+    slot="main"
+    class="text-white flex flex-col xl:flex-row items-center justify-center gap-10 w-screen"
+  >
+    <div
+      class="flex flex-col xl:flex-row gap-10 xl:gap-20 justify-center items-center"
+    >
+      {
+        buySectionStores.map((store) => {
+          return (
+            <div>
+              <img src={store.src} alt={store.name} class="w-28" />
+            </div>
+          );
+        })
+      }
+    </div>
+  </article>
+
+  <div slot="footer" class="pb-14">
+    <hr
+      class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
+    />
+    <h3 class="text-[40px] xl:text-[64px] font-bold text-white">
+      {buySectionData[0].price}
+    </h3>
+  </div>
+
+  <img
+    slot="background"
+    src={buySectionData[0].background}
+    class="object-center object-cover h-full w-full"
+  />
+</Section>
