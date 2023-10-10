@@ -1,0 +1,140 @@
+---
+import LongSection from './LongSection.astro';
+---
+
+<LongSection
+  title="ESPECIFICACIONES"
+  subtitle="Detalles técnicos"
+  color="white"
+  pt="pt-10"
+  textSize="text-[40px]"
+>
+  <article
+    slot="main"
+    class="text-white flex flex-col items-center justify-center gap-10 w-screen"
+  >
+    <div class="flex justify-evenly flex-wrap gap-5 text-gray-200 text-lg p-5">
+      <div class="table-1">
+        <table class="table-auto">
+          <tbody>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Acoplamiento al oído</td
+              >
+              <td class="border border-gray-200 p-2">Circumaural</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Color</td>
+              <td class="border border-gray-200 p-2">Negro</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Peso</td>
+              <td class="border border-gray-200 p-2">290 g</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Inalámbrico</td>
+              <td class="border border-gray-200 p-2">Sí</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Frecuencia de los auriculares</td
+              >
+              <td class="border border-gray-200 p-2">20 Hz - 20 kHz</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Impedancia</td>
+              <td class="border border-gray-200 p-2">32 ohms</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Sensibilidad de los auriculares</td
+              >
+              <td class="border border-gray-200 p-2">111 dBSPL/V</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">3D Audio</td>
+              <td class="border border-gray-200 p-2"
+                >PC/XBOX - Dolby Atmos 3D Audio <br /> PS4/PS5 - PlayStation 3D
+                Audio</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Controlador de los auriculares</td
+              >
+              <td class="border border-gray-200 p-2"
+                >40mm / Resonadores de baja frecuencia</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-2">
+        <table class="table-auto">
+          <tbody>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Frecuencia de respuesta del micrófono</td
+              >
+              <td class="border border-gray-200 p-2">100 Hz - 10 kHz</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Micrófono extraíble</td
+              >
+              <td class="border border-gray-200 p-2">No</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Sensibilidad del micrófono</td
+              >
+              <td class="border border-gray-200 p-2">45 dBV</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Patrón de captación del micrófono</td
+              >
+              <td class="border border-gray-200 p-2">Unidireccional</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Relación señal micrófono</td
+              >
+              <td class="border border-gray-200 p-2">&gt;42 dB</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Conectores</td>
+              <td class="border border-gray-200 p-2"
+                >Estación base multifunción <br /> Adaptador inalámbrico USB A</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Control de volumen</td
+              >
+              <td class="border border-gray-200 p-2"
+                >Rueda de volumen en la oreja</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold"
+                >Longitud del cable de la base de carga</td
+              >
+              <td class="border border-gray-200 p-2">90 cm</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2 font-bold">Garantía</td>
+              <td class="border border-gray-200 p-2">3 años</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+  <img
+    slot="background"
+    src="/testingsecond/specifs.png"
+    class="object-center object-cover h-full w-full"
+  />
+</LongSection>

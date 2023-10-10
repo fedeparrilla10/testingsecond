@@ -1,7 +1,7 @@
 export const buySectionData = [
   {
-    background: '/testingrepo/innovationbg.jpg',
-    price: '229.90 €',
+    background: '/testingsecond/bgrig8002.png',
+    price: '199.90 €',
   },
 ];
 
@@ -9,16 +9,16 @@ export const buySectionStores = [
   {
     id: 1,
     name: 'Game',
-    src: '/testingrepo/game.png',
+    src: '/testingsecond/game.png',
   },
   {
     id: 2,
     name: 'El Corte Inglés',
-    src: '/testingrepo/corteinglés.png',
+    src: '/testingsecond/corteinglés.png',
   },
   {
     id: 3,
     name: 'Fnac',
-    src: '/testingrepo/fnac.png',
+    src: '/testingsecond/fnac.png',
   },
 ];

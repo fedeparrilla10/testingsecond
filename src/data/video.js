@@ -1,20 +1,20 @@
 export const videoData = [
   {
-    title: 'Tecnología Hall-Effect',
+    title: 'Máxima Comodidad',
     description:
-      'Los joysticks y gatillos cuentan con una precisión y una durabilidadmuy mejoradas gracias a la tecnología magnética, que elimina la desviación de los joysticks',
-    src: '/testingrepo/analog.mp4',
+      'La diadema es increíblemente resistente y flexible, pese a ser una de las más ligeras de su categoría. Y todo combinado con el inconfundible diseño limpio y adaptado al juego de élite que caracteriza a RIG.',
+    src: '/testingsecond/headbandvid.mp4',
   },
   {
-    title: 'Trigger Blocker',
+    title: 'ZERO LAG',
     description:
-      'Adáptate a cualquier juego o situación personalizando la amplitud de tus gatillos',
-    src: '/testingrepo/r2l2trigger.mp4',
+      'Experimenta cero lag y una reducción de interferencias gracias a una potente conexión de radiofrecuencia dedicada de 2.4 GHz.',
+    src: '/testingsecond/zerolagvid.mp4',
   },
   {
-    title: 'Personalización TOTAL',
+    title: 'Virtualmente Indestructibles',
     description:
-      'Cuatro perfiles guardados por plataforma, tres sets de pesos, tres tamaños de joystick, tres sets de cabezales de joystick, una entrada de micro externo y no menos de sesenta opciones de personalización',
-    src: '/testingrepo/customization.mp4',
+      'Las almohadillas del RIG 800 PRO están diseñadas para separarse fácilmente de la diadema cuando se ejerce presión, evitando así posibles roturas.',
+    src: '/testingsecond/notbreakvid.mp4',
   },
 ];

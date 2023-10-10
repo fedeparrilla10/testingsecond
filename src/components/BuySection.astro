@@ -1,15 +1,14 @@
 ---
-import Section from './Section.astro';
+import LongSection from './LongSection.astro';
 import { buySectionData, buySectionStores } from '../data/buy_section';
 ---
 
-<Section
-  title="REVOLUTION 5 PRO"
-  subtitle="¡Hazte con él en tu tienda favorita!"
+<LongSection
+  title="RIG 800 PRO"
+  subtitle="¡Hazte con ellos en tu tienda favorita!"
   color="white"
   pt="pt-10"
   textSize="text-[40px]"
-  img="/testingrepo/naconlogo.svg"
   id="buysection"
 >
   <article
@@ -17,17 +16,71 @@ import { buySectionData, buySectionStores } from '../data/buy_section';
     class="text-white flex flex-col xl:flex-row items-center justify-center gap-10 w-screen"
   >
     <div
-      class="flex flex-col xl:flex-row gap-10 xl:gap-20 justify-center items-center"
+      class="flex flex-col lg:flex-row justify-around gap-16 xl:gap-24 py-10"
     >
-      {
-        buySectionStores.map((store) => {
-          return (
-            <div>
-              <img src={store.src} alt={store.name} class="w-28" />
-            </div>
-          );
-        })
-      }
+      <div
+        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
+      >
+        <img src="/testingsecond/800prohdbox.webp" alt="PC" class="w-72" />
+        <p class="text-xl">800 PRO HD</p>
+        <img src="/testingsecond/pc.svg" alt="PC" class="w-16 h-16 pl-5" />
+        <div class="flex flex-row gap-10">
+          {
+            buySectionStores.map((store) => {
+              return (
+                <a href="#" class="flex items-center justify-center gap-2">
+                  <img src={store.src} alt={store.name} class="w-16" />
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
+      >
+        <img
+          src="/testingsecond/800prohsbox.webp"
+          alt="PS4 & PS5"
+          class="w-72"
+        />
+        <p class="text-xl">800 PRO HS</p>
+        <div class="flex gap-3 flex-row items-center justify-center">
+          <img src="/testingsecond/ps4.svg" alt="PS4" class="w-16 h-16" />
+          <span>|</span>
+          <img src="/testingsecond/ps5.svg" alt="PS5" class="w-16 h-16" />
+        </div>
+        <div class="flex flex-row gap-10">
+          {
+            buySectionStores.map((store) => {
+              return (
+                <a href="#" class="flex items-center justify-center gap-2">
+                  <img src={store.src} alt={store.name} class="w-16" />
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
+      >
+        <img src="/testingsecond/800prohxbox.png" alt="XBOX" class="w-72" />
+        <p class="text-xl">800H PRO HX</p>
+        <img src="/testingsecond/xbox.svg" alt="PC" class="w-16 h-16" />
+        <div class="flex flex-row gap-10">
+          {
+            buySectionStores.map((store) => {
+              return (
+                <a href="#" class="flex items-center justify-center gap-2">
+                  <img src={store.src} alt={store.name} class="w-16" />
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
     </div>
   </article>
 
@@ -45,4 +98,4 @@ import { buySectionData, buySectionStores } from '../data/buy_section';
     src={buySectionData[0].background}
     class="object-center object-cover h-full w-full"
   />
-</Section>
+</LongSection>
