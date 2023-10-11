@@ -1,6 +1,10 @@
 ---
 import LongSection from './LongSection.astro';
-import { buySectionData, buySectionStores } from '../data/buy_section';
+import {
+  buySectionData,
+  buySectionStores,
+  productData,
+} from '../data/buy_section';
 ---
 
 <LongSection
@@ -18,84 +22,60 @@ import { buySectionData, buySectionStores } from '../data/buy_section';
     <div
       class="flex flex-col lg:flex-row justify-around gap-16 xl:gap-24 py-10"
     >
-      <div
-        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
-      >
-        <img src="/testingsecond/800prohdbox.webp" alt="PC" class="w-72" />
-        <p class="text-xl">800 PRO HD</p>
-        <img src="/testingsecond/pc.svg" alt="PC" class="w-16 h-16 pl-5" />
-        <div class="flex flex-row gap-10">
-          {
-            buySectionStores.map((store) => {
-              return (
+      {
+        productData.map((product) => (
+          <div class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5 gap-5">
+            <img src={product.imgSrc} alt={product.title} class="w-72" />
+            <p class="text-xl">{product.title}</p>
+            {product.secondLogoSrc ? (
+              <div class="flex gap-3 flex-row items-center justify-center">
+                <img
+                  src={product.logoSrc}
+                  alt={product.title}
+                  class={product.class}
+                />
+                <span> | </span>
+                <img
+                  src={product.secondLogoSrc}
+                  alt={product.altText}
+                  class={product.class}
+                />
+              </div>
+            ) : (
+              <img
+                src={product.logoSrc}
+                alt={product.title}
+                class={product.class}
+              />
+            )}
+            <div class="flex flex-row gap-10">
+              {buySectionStores.map((store) => (
                 <a href="#" class="flex items-center justify-center gap-2">
                   <img src={store.src} alt={store.name} class="w-16" />
                 </a>
-              );
-            })
-          }
-        </div>
-      </div>
-
-      <div
-        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
-      >
-        <img
-          src="/testingsecond/800prohsbox.webp"
-          alt="PS4 & PS5"
-          class="w-72"
-        />
-        <p class="text-xl">800 PRO HS</p>
-        <div class="flex gap-3 flex-row items-center justify-center">
-          <img src="/testingsecond/ps4.svg" alt="PS4" class="w-16 h-16" />
-          <span>|</span>
-          <img src="/testingsecond/ps5.svg" alt="PS5" class="w-16 h-16" />
-        </div>
-        <div class="flex flex-row gap-10">
-          {
-            buySectionStores.map((store) => {
-              return (
-                <a href="#" class="flex items-center justify-center gap-2">
-                  <img src={store.src} alt={store.name} class="w-16" />
-                </a>
-              );
-            })
-          }
-        </div>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5"
-      >
-        <img src="/testingsecond/800prohxbox.png" alt="XBOX" class="w-72" />
-        <p class="text-xl">800H PRO HX</p>
-        <img src="/testingsecond/xbox.svg" alt="PC" class="w-16 h-16" />
-        <div class="flex flex-row gap-10">
-          {
-            buySectionStores.map((store) => {
-              return (
-                <a href="#" class="flex items-center justify-center gap-2">
-                  <img src={store.src} alt={store.name} class="w-16" />
-                </a>
-              );
-            })
-          }
-        </div>
-      </div>
+              ))}
+            </div>
+            <h3 class="text-xl font-bold tracking-widest">
+              {buySectionData.price}
+            </h3>
+          </div>
+        ))
+      }
     </div>
   </article>
 
-  <div slot="footer" class="pb-14">
+  <!-- <div slot="footer" class="pb-14">
     <hr
       class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
     />
     <h3 class="text-[40px] xl:text-[64px] font-bold text-white">
-      {buySectionData[0].price}
+      {buySectionData.price}
     </h3>
-  </div>
+  </div> -->
 
   <img
     slot="background"
-    src={buySectionData[0].background}
+    src={buySectionData.background}
     class="object-center object-cover h-full w-full"
   />
 </LongSection>

@@ -1,5 +1,6 @@
 ---
 import LongSection from './LongSection.astro';
+import { firstSectionData } from '../data/first_section';
 ---
 
 <LongSection
@@ -14,25 +15,35 @@ import LongSection from './LongSection.astro';
     class="text-gray-200 flex flex-col items-center justify-center"
   >
     <div class="flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10">
-      <div class="flex flex-col items-center justify-center">
-        <img src="/testingsecond/pc1.jpg" alt="PC" />
-        <p class="text-xl">800 PRO HD</p>
-        <img src="/testingsecond/pc.svg" alt="PC" class="w-16 h-16 pl-5" />
-      </div>
-      <div class="flex flex-col items-center justify-center">
-        <img src="/testingsecond/ps5.jpg" alt="PS4 & PS5" />
-        <p class="text-xl">800 PRO HS</p>
-        <div class="flex gap-3 flex-row items-center justify-center">
-          <img src="/testingsecond/ps4.svg" alt="PS4" class="w-16 h-16" />
-          <span>|</span>
-          <img src="/testingsecond/ps5.svg" alt="PS5" class="w-16 h-16" />
-        </div>
-      </div>
-      <div class="flex flex-col items-center justify-center">
-        <img src="/testingsecond/xbox.jpg" alt="XBOX" />
-        <p class="text-xl">800H PRO HX</p>
-        <img src="/testingsecond/xbox.svg" alt="PC" class="w-16 h-16" />
-      </div>
+      {
+        firstSectionData.map((product) => (
+          <div class="flex flex-col items-center justify-center gap-2">
+            <img src={product.img} alt={product.title} />
+            <p class="text-xl">{product.title}</p>
+            {product.extraIcon ? (
+              <div class="flex gap-3 flex-row items-center justify-center">
+                <img
+                  src={product.icon}
+                  alt={product.title}
+                  class={product.class}
+                />
+                <span>|</span>
+                <img
+                  src={product.extraIcon}
+                  alt={product.title}
+                  class={product.class}
+                />
+              </div>
+            ) : (
+              <img
+                src={product.icon}
+                alt={product.title}
+                class={product.class}
+              />
+            )}
+          </div>
+        ))
+      }
     </div>
   </article>
 
