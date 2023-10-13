@@ -1,3 +1,21 @@
+export const specsImgs = [
+  {
+    id: 1,
+    name: 'Puerto Multifunción',
+    img: '/testingsecond/dock.svg',
+  },
+  {
+    id: 2,
+    name: 'Batería 24H',
+    img: '/testingsecond/battery.svg',
+  },
+  {
+    id: 3,
+    name: 'Inalambrico',
+    img: '/testingsecond/wireless.svg',
+  },
+];
+
 export const firstTable = [
   {
     title: 'Acoplamiento al oído',
