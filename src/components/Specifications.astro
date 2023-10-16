@@ -14,13 +14,17 @@ import { specsImgs, firstTable, secondTable } from '../data/specifications.js';
     slot="main"
     class="text-black flex flex-col items-center justify-center gap-10 w-screen"
   >
-    <div class="hidden xl:flex flex-col md:flex-row gap-10">
+    <div class="flex flex-col md:flex-row gap-10 pt-10">
       {
         specsImgs.map((spec) => {
           return (
             <div class="flex flex-col justify-center items-center gap-5">
-              <img src={spec.img} alt={spec.name} class="w-16 h-12" />
-              <p class="text-sm">{spec.name}</p>
+              <img
+                src={spec.img}
+                alt={spec.name}
+                class="w-20 h-14 md:w-16 md:h-12"
+              />
+              <p class="text-md font-semibold">{spec.name}</p>
             </div>
           );
         })
@@ -28,7 +32,7 @@ import { specsImgs, firstTable, secondTable } from '../data/specifications.js';
     </div>
 
     <div
-      class="flex flex-col xl:flex-row items-center justify-around gap-5 text-black text-md p-10"
+      class="flex flex-col lg:flex-row items-center justify-around gap-5 text-black text-md p-10"
     >
       <div class="table-1">
         <table class="table-auto">
