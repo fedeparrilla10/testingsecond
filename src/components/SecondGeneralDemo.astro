@@ -1,0 +1,70 @@
+---
+import LongSection from './LongSection.astro';
+import { secondGeneralDemoData } from '../data/general_demo';
+---
+
+<LongSection
+  title="CONEXIÓN DE LA BASE DE CARGA"
+  subtitle="Estación base multifunción para carga y conexión inalámbrica"
+  color="white"
+  pt="pt-5 xl:pt-20"
+  textSize="text-[36px] xl:text-[40px]"
+>
+  <article slot="main" class="flex flex-col items-center justify-center">
+    <div
+      class="text-gray-100 flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10"
+    >
+      {
+        secondGeneralDemoData.map((product) => (
+          <div class="flex flex-col items-center justify-center gap-2">
+            <video
+              src={product.video}
+              loop
+              autoplay
+              muted
+              playsinline
+              class="rounded-2xl w-4/5"
+            />
+            <p class="text-xl">{product.title}</p>
+            {product.extraIcon ? (
+              <div class="flex gap-3 flex-row items-center justify-center">
+                <img
+                  src={product.icon}
+                  alt={product.title}
+                  class={product.class}
+                />
+                <span>|</span>
+                <img
+                  src={product.extraIcon}
+                  alt={product.title}
+                  class={product.class}
+                />
+              </div>
+            ) : (
+              <img
+                src={product.icon}
+                alt={product.title}
+                class={product.class}
+              />
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </article>
+
+  <div slot="footer" class="pb-10">
+    <a
+      class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+      href="#buysection"
+    >
+      COMPRAR AHORA</a
+    >
+  </div>
+
+  <div
+    slot="background"
+    class="bg-gradient-to-r from-zinc-950 to-zinc-900 object-center object-cover h-full w-full"
+  >
+  </div>
+</LongSection>
