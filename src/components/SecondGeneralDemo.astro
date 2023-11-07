@@ -12,7 +12,7 @@ import { secondGeneralDemoData } from '../data/general_demo';
 >
   <article slot="main" class="flex flex-col items-center justify-center">
     <div
-      class="text-gray-100 flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10"
+      class="text-gray-100 flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10 px-5"
     >
       {
         secondGeneralDemoData.map((product) => (
@@ -23,7 +23,7 @@ import { secondGeneralDemoData } from '../data/general_demo';
               autoplay
               muted
               playsinline
-              class="rounded-2xl w-4/5"
+              class="rounded-2xl w-full max-w-lg xl:max-w-2xl"
             />
             <p class="text-xl">{product.title}</p>
             {product.extraIcon ? (

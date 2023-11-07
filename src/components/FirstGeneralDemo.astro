@@ -11,7 +11,9 @@ import { firstGeneralDemoData } from '../data/general_demo';
   textSize="text-[36px] xl:text-[40px]"
 >
   <article slot="main" class="flex flex-col items-center justify-center">
-    <div class="flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10">
+    <div
+      class="flex flex-col lg:flex-row justify-around gap-6 xl:gap-24 py-10 px-5"
+    >
       {
         firstGeneralDemoData.map((product) => (
           <div class="flex flex-col items-center justify-center gap-2">
@@ -21,7 +23,7 @@ import { firstGeneralDemoData } from '../data/general_demo';
               autoplay
               muted
               playsinline
-              class="rounded-2xl w-4/5"
+              class="rounded-2xl w-full max-w-lg xl:max-w-2xl"
             />
             <p class="text-xl">{product.title}</p>
             {product.extraIcon ? (
