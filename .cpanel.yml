@@ -1,4 +1,12 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/nacongamer/public_html/productos/rig800
-    - /bin/cp -R * $DEPLOYPATH
+    - mkdir -p $DEPLOYPATH # Crea el directorio de destino si no existe
+    - /bin/cp -R ./src $DEPLOYPATH # Copia la carpeta 'src'
+    - /bin/cp -R ./public $DEPLOYPATH # Copia la carpeta 'public'
+    - /bin/cp ./astro.config $DEPLOYPATH # Copia astro.config
+    - /bin/cp ./package.json $DEPLOYPATH # Copia package.json
+    - /bin/cp ./package-lock.json $DEPLOYPATH # Copia package-lock.json
+    - /bin/cp ./README.md $DEPLOYPATH # Copia README.md
+    - /bin/cp ./tailwind.config.js $DEPLOYPATH # Copia tailwind.config.js
+    - /bin/cp ./tsconfig.json $DEPLOYPATH # Copia tsconfig.json
