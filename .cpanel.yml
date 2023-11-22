@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nacongamer/public_html/productos/rig800
+    - /bin/cp -R * $DEPLOYPATH
