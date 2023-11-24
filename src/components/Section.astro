@@ -1,5 +1,5 @@
 ---
-const { color, img, title, subtitle, price, id, pt, textSize } =
+const { color, img, title, subtitle, price, id, pt, textSize, secondPrice } =
   Astro.props;
 const textColor = `text-${color}`;
 ---
@@ -16,7 +16,18 @@ const textColor = `text-${color}`;
           <header class={`flex flex-col items-center justify-center ${pt}`}>
             <h2 class={`${textColor}  ${textSize} font-medium`}>{title}</h2>
             <p class={`${textColor} text-[22px]`}>{subtitle}</p>
-            {price && <p class={`${textColor} text-lg`}>{price}</p>}
+            {price && (
+              <div>
+                <p
+                  class={`${textColor} text-lg line-through decoration-red-700 decoration-4`}
+                >
+                  {price}
+                </p>
+                {secondPrice && (
+                  <p class={`${textColor} text-lg`}>{secondPrice}</p>
+                )}
+              </div>
+            )}
             {img && <img src={img} class="w-24 pt-5" />}
           </header>
         )
